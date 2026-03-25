@@ -25,3 +25,6 @@ dist-ssr
 
 # Vite cache
 .vite
+
+# Telegram bot credentials (copy from telegram-config.example.php and fill in values)
+public/telegram-config.php

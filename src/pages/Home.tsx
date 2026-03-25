@@ -1,3 +1,4 @@
+import React from 'react'
 import { motion } from 'framer-motion'
 import { 
   Zap, 
@@ -21,7 +22,45 @@ import {
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
+type FormState = 'idle' | 'sending' | 'success' | 'error'
+
 export default function Home() {
+  const [formState, setFormState] = React.useState<FormState>('idle')
+  const [errorMsg, setErrorMsg]   = React.useState('')
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    const form = e.currentTarget
+    const data = {
+      name:    (form.elements.namedItem('name')    as HTMLInputElement).value,
+      company: (form.elements.namedItem('company') as HTMLInputElement).value,
+      contact: (form.elements.namedItem('contact') as HTMLInputElement).value,
+      task:    (form.elements.namedItem('task')    as HTMLTextAreaElement).value,
+    }
+
+    setFormState('sending')
+    setErrorMsg('')
+
+    try {
+      const res = await fetch('/telegram-notify.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+      const json = await res.json()
+      if (json.ok) {
+        setFormState('success')
+        form.reset()
+      } else {
+        setFormState('error')
+        setErrorMsg(json.error ?? 'Произошла ошибка. Попробуйте позже.')
+      }
+    } catch {
+      setFormState('error')
+      setErrorMsg('Не удалось отправить запрос. Проверьте соединение.')
+    }
+  }
+
   return (
     <div className="overflow-hidden">
       {/* 1. Hero Section */}
@@ -606,28 +645,43 @@ export default function Home() {
             </div>
 
             <div className="bg-slate-900/50 p-8 rounded-3xl border border-slate-800 backdrop-blur-sm">
-              <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 ml-1">Имя</label>
-                    <input type="text" className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:border-blue-500 outline-none transition-all" placeholder="Александр" />
+                    <input name="name" type="text" className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:border-blue-500 outline-none transition-all" placeholder="Александр" />
                   </div>
                   <div>
                     <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 ml-1">Компания</label>
-                    <input type="text" className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:border-blue-500 outline-none transition-all" placeholder="Digital Corp" />
+                    <input name="company" type="text" className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:border-blue-500 outline-none transition-all" placeholder="Digital Corp" />
                   </div>
                 </div>
                 <div>
                   <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 ml-1">Email / Telegram</label>
-                  <input type="text" className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:border-blue-500 outline-none transition-all" placeholder="@username" />
+                  <input name="contact" type="text" className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:border-blue-500 outline-none transition-all" placeholder="@username" />
                 </div>
                 <div>
                   <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 ml-1">Задача (коротко)</label>
-                  <textarea rows={4} className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:border-blue-500 outline-none transition-all resize-none" placeholder="Нужно перенести учет ПДн из Excel..." />
+                  <textarea name="task" rows={4} className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:border-blue-500 outline-none transition-all resize-none" placeholder="Нужно перенести учет ПДн из Excel..." />
                 </div>
-                <button type="submit" className="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg shadow-blue-600/20 transition-all flex items-center justify-center gap-2">
-                  Отправить на оценку
-                  <Send size={18} />
+
+                {formState === 'success' && (
+                  <div className="flex items-center gap-2 text-green-400 text-sm font-medium">
+                    <CheckCircle2 size={16} />
+                    Заявка отправлена! Мы свяжемся с вами в течение 24 часов.
+                  </div>
+                )}
+                {formState === 'error' && (
+                  <div className="text-red-400 text-sm font-medium">{errorMsg}</div>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={formState === 'sending' || formState === 'success'}
+                  className="w-full py-4 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold rounded-xl shadow-lg shadow-blue-600/20 transition-all flex items-center justify-center gap-2"
+                >
+                  {formState === 'sending' ? 'Отправка...' : 'Отправить на оценку'}
+                  {formState !== 'sending' && <Send size={18} />}
                 </button>
               </form>
             </div>
