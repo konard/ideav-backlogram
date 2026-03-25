@@ -182,7 +182,7 @@ export default function Home() {
                   <div className="h-4 w-5/6 bg-slate-800 rounded animate-pulse" />
                   <div className="pt-4 border-t border-slate-800">
                     <p className="text-blue-400 font-semibold mb-2">Наше предложение:</p>
-                    <p className="text-slate-300">Мы берем на себя задачи, которые не требуют кастомного кода, но съедают ресурс вашей команды.</p>
+                    <p className="text-slate-300">Мы берем на себя задачи, которые съедают значительный ресурс вашей команды, и выполняем их беспрецедентно быстро.</p>
                   </div>
                 </div>
               </div>
@@ -196,7 +196,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Работаем там, где обычные конструкторы «падают»</h2>
-            <p className="text-slate-400 max-w-2xl mx-auto italic">Это не «конструктор для менеджеров». Это промышленная платформа.</p>
+            <p className="text-slate-400 max-w-2xl mx-auto italic">Это не просто «конструктор для менеджеров». Это промышленная платформа.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
