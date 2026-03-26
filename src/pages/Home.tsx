@@ -241,7 +241,7 @@ export default function Home() {
       <section id="process" className="py-24 bg-slate-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-100"><a href="#cta">Пришлите задачу</a>. Мы сделаем её работающим приложением.</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-100"><a href="#cta" className="text-blue-400 hover:text-blue-300 transition-colors underline underline-offset-4 decoration-blue-400/50">Пришлите задачу</a>. Мы сделаем её работающим приложением.</h2>
             <p className="text-slate-400 max-w-2xl mx-auto">Ваш бэклог — наш приоритет. От идеи до эксплуатации в корпоративном контуре.</p>
           </div>
 
