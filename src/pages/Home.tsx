@@ -664,6 +664,10 @@ export default function Home() {
               <div className="mb-6">
                 <span className="text-slate-400 text-sm uppercase font-bold tracking-widest">Сроки:</span>
                 <div className="text-2xl font-bold text-slate-100 mt-1">4–8 недель</div>
+                <div className="mt-3 flex items-baseline gap-2">
+                  <span className="text-4xl font-black text-white">от 93 750</span>
+                  <span className="text-slate-500 text-xl font-bold">р</span>
+                </div>
               </div>
               <ul className="space-y-4 mb-8 flex-1">
                 {['Выбор задачи из бэклога', 'Полный цикл разработки', 'Развертывание в контуре', 'Инструкции и доки'].map((item, i) => (
@@ -673,9 +677,9 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <button className="w-full py-4 bg-slate-900 border border-slate-800 hover:border-slate-600 text-white font-bold rounded-xl transition-all">
+              <a href="#cta" className="w-full py-4 bg-slate-900 border border-slate-800 hover:border-slate-600 text-white font-bold rounded-xl transition-all text-center block">
                 Выбрать задачу
-              </button>
+              </a>
             </div>
 
             <div className="p-8 rounded-3xl border-2 border-blue-600 bg-slate-950 relative flex flex-col shadow-[0_0_50px_-12px_rgba(37,99,235,0.3)]">
@@ -696,9 +700,9 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <button className="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg shadow-blue-600/20 transition-all">
+              <a href="#cta" className="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg shadow-blue-600/20 transition-all text-center block">
                 Оформить подписку
-              </button>
+              </a>
             </div>
 
             <div className="p-8 rounded-3xl border border-slate-800 bg-slate-950 flex flex-col hover:border-slate-700 transition-all">
@@ -709,16 +713,16 @@ export default function Home() {
                 <span className="text-slate-500 text-xl font-bold">₽/час</span>
               </div>
               <ul className="space-y-4 mb-8 flex-1">
-                {['Системный аналитик QDM', 'Настройка сложных интеграций', 'Кастомизация UI/UX', 'Обучение сотрудников'].map((item, i) => (
+                {['Системный аналитик', 'Настройка сложных интеграций', 'Кастомизация UI/UX', 'Обучение сотрудников'].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-sm text-slate-400">
                     <CheckCircle2 size={14} className="text-blue-500" />
                     {item}
                   </li>
                 ))}
               </ul>
-              <button className="w-full py-4 bg-slate-900 border border-slate-800 hover:border-slate-600 text-white font-bold rounded-xl transition-all">
+              <a href="#cta" className="w-full py-4 bg-slate-900 border border-slate-800 hover:border-slate-600 text-white font-bold rounded-xl transition-all text-center block">
                 Уточнить условия
-              </button>
+              </a>
             </div>
           </div>
         </div>
