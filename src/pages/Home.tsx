@@ -338,7 +338,67 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. Integration Section */}
+      {/* 6. AI Section */}
+      <section className="py-24 bg-slate-900/50 relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-blue-600/5 blur-[100px] rounded-full -z-10" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
+              <Cpu size={14} />
+              <span>AI-native разработка</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-100">
+              Мы строим продукты, интегрированные с&nbsp;<span className="text-blue-400">искусственным интеллектом</span>
+            </h2>
+            <p className="text-slate-400 max-w-2xl mx-auto text-lg">
+              Языковые модели и агенты берут на себя большую часть работы по программированию и интеграции — мы используем их полную мощь, чтобы доставлять решения быстрее.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                icon: Cpu,
+                title: 'LLM в ядре',
+                desc: 'Языковые модели встроены в архитектуру продукта, а не добавлены сверху как функция.'
+              },
+              {
+                icon: Code2,
+                title: 'Агенты пишут код',
+                desc: 'Агенты генерируют, тестируют и рефакторят код — разработчики контролируют результат, а не пишут рутину.'
+              },
+              {
+                icon: Zap,
+                title: 'Автоматические интеграции',
+                desc: 'Подключение к внешним системам и API описывается на языке задачи — агент строит интеграцию самостоятельно.'
+              },
+              {
+                icon: Activity,
+                title: 'Непрерывное улучшение',
+                desc: 'Модели обучаются на паттернах вашего бизнеса и становятся точнее с каждым запросом.'
+              }
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+                className="p-6 rounded-2xl border border-slate-800 bg-slate-900/60 hover:border-blue-500/30 transition-colors"
+              >
+                <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-5">
+                  <item.icon size={22} />
+                </div>
+                <h3 className="font-bold text-slate-100 mb-2">{item.title}</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Integration Section */}
       <section className="py-24 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/5 blur-[120px] rounded-full -z-10" />
         
@@ -367,7 +427,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. Case Study Section */}
+      {/* 8. Case Study Section */}
       <section id="cases" className="py-24 bg-slate-900/50 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -611,7 +671,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 8. Ready Projects Types */}
+      {/* 9. Ready Projects Types */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -649,7 +709,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 9. Pricing Section */}
+      {/* 10. Pricing Section */}
       <section id="pricing" className="py-24 bg-slate-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -728,7 +788,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 10. Team Roles Section */}
+      {/* 11. Team Roles Section */}
       <section className="py-24 border-t border-slate-900 bg-slate-950/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -768,7 +828,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 11. Final CTA Form */}
+      {/* 12. Final CTA Form */}
       <section id="cta" className="py-24 border-t border-slate-900 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center bg-slate-950 p-12 rounded-[3rem] border border-slate-800 shadow-2xl overflow-hidden relative">
