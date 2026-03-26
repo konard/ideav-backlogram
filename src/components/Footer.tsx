@@ -35,10 +35,10 @@ export function Footer() {
           <div>
             <h3 className="text-slate-100 font-semibold mb-6">Ресурсы</h3>
             <ul className="space-y-4">
-              <li><a href="#" className="text-slate-400 hover:text-blue-400 text-sm transition-colors flex items-center gap-2">Документация <ExternalLink size={12} /></a></li>
-              <li><a href="#" className="text-slate-400 hover:text-blue-400 text-sm transition-colors">API Reference</a></li>
-              <li><a href="#" className="text-slate-400 hover:text-blue-400 text-sm transition-colors">Политика безопасности</a></li>
-              <li><a href="#" className="text-slate-400 hover:text-blue-400 text-sm transition-colors">Наш контур (On-premise)</a></li>
+              <li><a href="https://help.integram.io/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 text-sm transition-colors flex items-center gap-2">Документация <ExternalLink size={12} /></a></li>
+              <li><a href="https://integram.io/api.html" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 text-sm transition-colors">API Reference</a></li>
+              <li><a href="https://integram.io/terms.html" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 text-sm transition-colors">Правила использования</a></li>
+              <li><a href="https://rutube.ru/channel/41204904/videos/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 text-sm transition-colors">RUTUBE</a></li>
             </ul>
           </div>
 
@@ -70,7 +70,7 @@ export function Footer() {
             © {currentYear} ООО «Интеграм». Все права защищены.
           </div>
           <div className="text-slate-500 text-xs italic">
-            Не замена Excel. Промышленный инструмент ускорения бэклога.
+            Не только замена Excel. Промышленный инструмент ускорения бэклога.
           </div>
         </div>
       </div>

@@ -204,7 +204,7 @@ export default function Home() {
               {
                 icon: Database,
                 title: 'Не тормозит на объемах',
-                desc: 'Протестировано на сотнях миллионов записей. Ваши корпоративные объемы — это штатный режим для QDM.'
+                desc: 'Протестировано на сотнях миллионов записей. Ваши корпоративные объемы — это штатный режим для Интеграма.'
               },
               {
                 icon: Layers,
@@ -381,7 +381,7 @@ export default function Home() {
               <div className="p-8 rounded-3xl border border-slate-800 bg-slate-950/80 shadow-xl">
                 <h3 className="text-xl font-bold text-slate-100 mb-6 flex items-center gap-3">
                   <span className="w-1.5 h-6 bg-blue-500 rounded-full" />
-                  Контекст проекта
+                  Управление процессами обработки персональных данных (ПДн)
                 </h3>
                 <p className="text-slate-300 leading-relaxed mb-6">
                   Крупный банк с тысячами сотрудников и десятками разрозненных ИТ-систем.
@@ -744,7 +744,7 @@ export default function Home() {
               <div>
                 <h3 className="text-xl font-bold text-slate-100 mb-2">Системный аналитик</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">
-                  Сбор требований, проектирование структур данных и логики процессов. Переводит бизнес-язык в архитектуру QDM.
+                  Сбор требований, проектирование структур данных и логики процессов. Переводит бизнес-язык в архитектуру платформы.
                 </p>
               </div>
             </div>
