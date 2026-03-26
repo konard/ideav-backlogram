@@ -375,8 +375,152 @@ export default function Home() {
             <p className="text-slate-400 max-w-2xl mx-auto">Реальные проекты, реализованные на платформе для разных отраслей и задач.</p>
           </div>
 
-          {/* Case 1: Bank PD management (NDA) */}
+          {/* Case 1: Construction Worker Motivation System */}
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
+            <div className="space-y-8">
+              <div className="p-8 rounded-3xl border border-slate-800 bg-slate-950/80 shadow-xl">
+                <h3 className="text-xl font-bold text-slate-100 mb-6 flex items-center gap-3">
+                  <span className="w-1.5 h-6 bg-blue-500 rounded-full" />
+                  Система мотивации строительного персонала
+                </h3>
+                <p className="text-slate-300 leading-relaxed mb-6">
+                  Заказчик хотел глобальную платформу типа WeChat — покрыть все задачи прораба и интегрироваться в жизнь заказчиков и исполнителей проектов.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0 w-6 h-6 rounded bg-red-500/10 text-red-500 flex items-center justify-center">
+                      <ArrowRight size={14} className="rotate-45" />
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-bold text-slate-200">Задача:</h4>
+                      <p className="text-sm text-slate-400">Регистрация, онбординг, заведение проектов, распределение задач, процесс выполнения проекта.</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0 w-6 h-6 rounded bg-emerald-500/10 text-emerald-500 flex items-center justify-center">
+                      <CheckCircle2 size={14} />
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-bold text-slate-200">Реализация:</h4>
+                      <p className="text-sm text-slate-400">MVP системы: дашборд метрик, планирование H_min, назначения, мониторинг, экономика и симуляция сценариев.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-3 gap-4">
+                <div className="p-4 rounded-2xl border border-slate-800 bg-slate-900/50 text-center">
+                  <div className="text-2xl font-black text-blue-500 mb-1">MVP</div>
+                  <div className="text-xs text-slate-500 uppercase font-bold tracking-widest">за 6 недель</div>
+                </div>
+                <div className="p-4 rounded-2xl border border-slate-800 bg-slate-900/50 text-center">
+                  <div className="text-2xl font-black text-blue-500 mb-1">7</div>
+                  <div className="text-xs text-slate-500 uppercase font-bold tracking-widest">модулей</div>
+                </div>
+                <div className="p-4 rounded-2xl border border-slate-800 bg-slate-900/50 text-center">
+                  <div className="text-2xl font-black text-blue-500 mb-1">0</div>
+                  <div className="text-xs text-slate-500 uppercase font-bold tracking-widest">кода вручную</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="absolute -inset-10 bg-blue-600/10 blur-[100px] rounded-full -z-10 animate-pulse" />
+              <div className="p-2 rounded-[2rem] bg-gradient-to-br from-slate-800 to-slate-950 border border-slate-800 shadow-2xl">
+                <div className="bg-slate-900 rounded-[1.5rem] overflow-hidden">
+                  <div className="h-10 bg-slate-950 flex items-center px-6 gap-2 border-b border-slate-800">
+                    <div className="w-2.5 h-2.5 rounded-full bg-slate-800" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-slate-800" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-slate-800" />
+                    <div className="ml-auto flex items-center gap-4">
+                      <div className="w-32 h-1.5 bg-slate-800 rounded-full" />
+                      <div className="w-8 h-4 rounded bg-blue-600/20" />
+                    </div>
+                  </div>
+                  <img
+                    src={`${import.meta.env.BASE_URL}case-orbita-planner.png`}
+                    alt="Орбита Planner — система управления строительным персоналом"
+                    className="w-full block"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Case 2: Venture Fund Sovereignty Audit */}
+          <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
+            <div className="relative order-last lg:order-first">
+              <div className="absolute -inset-10 bg-blue-600/10 blur-[100px] rounded-full -z-10 animate-pulse" />
+              <div className="p-2 rounded-[2rem] bg-gradient-to-br from-slate-800 to-slate-950 border border-slate-800 shadow-2xl">
+                <div className="bg-slate-900 rounded-[1.5rem] overflow-hidden">
+                  <div className="h-10 bg-slate-950 flex items-center px-6 gap-2 border-b border-slate-800">
+                    <div className="w-2.5 h-2.5 rounded-full bg-slate-800" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-slate-800" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-slate-800" />
+                    <div className="ml-auto flex items-center gap-4">
+                      <div className="w-32 h-1.5 bg-slate-800 rounded-full" />
+                      <div className="w-8 h-4 rounded bg-blue-600/20" />
+                    </div>
+                  </div>
+                  <img
+                    src={`${import.meta.env.BASE_URL}case-sovereignty-audit.png`}
+                    alt="Аудит суверенности 9D — оценка технологической независимости портфельных компаний"
+                    className="w-full block"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-8">
+              <div className="p-8 rounded-3xl border border-slate-800 bg-slate-950/80 shadow-xl">
+                <h3 className="text-xl font-bold text-slate-100 mb-6 flex items-center gap-3">
+                  <span className="w-1.5 h-6 bg-blue-500 rounded-full" />
+                  Аудит суверенности портфеля венчурного фонда
+                </h3>
+                <p className="text-slate-300 leading-relaxed mb-6">
+                  Венчурный фонд, инвестирующий в технологические компании (БПЛА, дроны, глубокий тех). Портфель из десятков стартапов с разной степенью зависимости от иностранных технологий.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0 w-6 h-6 rounded bg-red-500/10 text-red-500 flex items-center justify-center">
+                      <ArrowRight size={14} className="rotate-45" />
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-bold text-slate-200">Задача:</h4>
+                      <p className="text-sm text-slate-400">Единая методология оценки суверенности по 9 измерениям, проверка соответствия НПА (ПП-1726, ФЗ-149) и дорожная карта.</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0 w-6 h-6 rounded bg-emerald-500/10 text-emerald-500 flex items-center justify-center">
+                      <CheckCircle2 size={14} />
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-bold text-slate-200">Реализация:</h4>
+                      <p className="text-sm text-slate-400">9D Аудит, пирамида суверенности, моделлер, сканер репозиториев (50+ метрик) и автоматические дорожные карты.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-3 gap-4">
+                <div className="p-4 rounded-2xl border border-slate-800 bg-slate-900/50 text-center">
+                  <div className="text-2xl font-black text-blue-500 mb-1">9</div>
+                  <div className="text-xs text-slate-500 uppercase font-bold tracking-widest">измерений</div>
+                </div>
+                <div className="p-4 rounded-2xl border border-slate-800 bg-slate-900/50 text-center">
+                  <div className="text-2xl font-black text-blue-500 mb-1">50+</div>
+                  <div className="text-xs text-slate-500 uppercase font-bold tracking-widest">метрик</div>
+                </div>
+                <div className="p-4 rounded-2xl border border-slate-800 bg-slate-900/50 text-center">
+                  <div className="text-2xl font-black text-blue-500 mb-1">11</div>
+                  <div className="text-xs text-slate-500 uppercase font-bold tracking-widest">агентов</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Case 3: Bank PD management (NDA) */}
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="p-8 rounded-3xl border border-slate-800 bg-slate-950/80 shadow-xl">
                 <h3 className="text-xl font-bold text-slate-100 mb-6 flex items-center gap-3">
@@ -460,150 +604,6 @@ export default function Home() {
                       <p className="text-xs text-slate-500 text-center max-w-[160px]">Скриншоты не публикуются по условиям соглашения</p>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Case 2: Construction Worker Motivation System */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
-            <div className="relative order-last lg:order-first">
-              <div className="absolute -inset-10 bg-blue-600/10 blur-[100px] rounded-full -z-10 animate-pulse" />
-              <div className="p-2 rounded-[2rem] bg-gradient-to-br from-slate-800 to-slate-950 border border-slate-800 shadow-2xl">
-                <div className="bg-slate-900 rounded-[1.5rem] overflow-hidden">
-                  <div className="h-10 bg-slate-950 flex items-center px-6 gap-2 border-b border-slate-800">
-                    <div className="w-2.5 h-2.5 rounded-full bg-slate-800" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-slate-800" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-slate-800" />
-                    <div className="ml-auto flex items-center gap-4">
-                      <div className="w-32 h-1.5 bg-slate-800 rounded-full" />
-                      <div className="w-8 h-4 rounded bg-blue-600/20" />
-                    </div>
-                  </div>
-                  <img
-                    src={`${import.meta.env.BASE_URL}case-orbita-planner.png`}
-                    alt="Орбита Planner — система управления строительным персоналом"
-                    className="w-full block"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-8">
-              <div className="p-8 rounded-3xl border border-slate-800 bg-slate-950/80 shadow-xl">
-                <h3 className="text-xl font-bold text-slate-100 mb-6 flex items-center gap-3">
-                  <span className="w-1.5 h-6 bg-blue-500 rounded-full" />
-                  Система мотивации строительного персонала
-                </h3>
-                <p className="text-slate-300 leading-relaxed mb-6">
-                  Заказчик хотел глобальную платформу типа WeChat — покрыть все задачи прораба и интегрироваться в жизнь заказчиков и исполнителей проектов.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-6 h-6 rounded bg-red-500/10 text-red-500 flex items-center justify-center">
-                      <ArrowRight size={14} className="rotate-45" />
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-bold text-slate-200">Задача:</h4>
-                      <p className="text-sm text-slate-400">Регистрация, онбординг, заведение проектов, распределение задач, процесс выполнения проекта.</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-6 h-6 rounded bg-emerald-500/10 text-emerald-500 flex items-center justify-center">
-                      <CheckCircle2 size={14} />
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-bold text-slate-200">Реализация:</h4>
-                      <p className="text-sm text-slate-400">MVP системы: дашборд метрик, планирование H_min, назначения, мониторинг, экономика и симуляция сценариев.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-3 gap-4">
-                <div className="p-4 rounded-2xl border border-slate-800 bg-slate-900/50 text-center">
-                  <div className="text-2xl font-black text-blue-500 mb-1">MVP</div>
-                  <div className="text-xs text-slate-500 uppercase font-bold tracking-widest">за 6 недель</div>
-                </div>
-                <div className="p-4 rounded-2xl border border-slate-800 bg-slate-900/50 text-center">
-                  <div className="text-2xl font-black text-blue-500 mb-1">7</div>
-                  <div className="text-xs text-slate-500 uppercase font-bold tracking-widest">модулей</div>
-                </div>
-                <div className="p-4 rounded-2xl border border-slate-800 bg-slate-900/50 text-center">
-                  <div className="text-2xl font-black text-blue-500 mb-1">0</div>
-                  <div className="text-xs text-slate-500 uppercase font-bold tracking-widest">кода вручную</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Case 3: Venture Fund Sovereignty Audit */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <div className="p-8 rounded-3xl border border-slate-800 bg-slate-950/80 shadow-xl">
-                <h3 className="text-xl font-bold text-slate-100 mb-6 flex items-center gap-3">
-                  <span className="w-1.5 h-6 bg-blue-500 rounded-full" />
-                  Аудит суверенности портфеля венчурного фонда
-                </h3>
-                <p className="text-slate-300 leading-relaxed mb-6">
-                  Венчурный фонд, инвестирующий в технологические компании (БПЛА, дроны, глубокий тех). Портфель из десятков стартапов с разной степенью зависимости от иностранных технологий.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-6 h-6 rounded bg-red-500/10 text-red-500 flex items-center justify-center">
-                      <ArrowRight size={14} className="rotate-45" />
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-bold text-slate-200">Задача:</h4>
-                      <p className="text-sm text-slate-400">Единая методология оценки суверенности по 9 измерениям, проверка соответствия НПА (ПП-1726, ФЗ-149) и дорожная карта.</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-6 h-6 rounded bg-emerald-500/10 text-emerald-500 flex items-center justify-center">
-                      <CheckCircle2 size={14} />
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-bold text-slate-200">Реализация:</h4>
-                      <p className="text-sm text-slate-400">9D Аудит, пирамида суверенности, моделлер, сканер репозиториев (50+ метрик) и автоматические дорожные карты.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-3 gap-4">
-                <div className="p-4 rounded-2xl border border-slate-800 bg-slate-900/50 text-center">
-                  <div className="text-2xl font-black text-blue-500 mb-1">9</div>
-                  <div className="text-xs text-slate-500 uppercase font-bold tracking-widest">измерений</div>
-                </div>
-                <div className="p-4 rounded-2xl border border-slate-800 bg-slate-900/50 text-center">
-                  <div className="text-2xl font-black text-blue-500 mb-1">50+</div>
-                  <div className="text-xs text-slate-500 uppercase font-bold tracking-widest">метрик</div>
-                </div>
-                <div className="p-4 rounded-2xl border border-slate-800 bg-slate-900/50 text-center">
-                  <div className="text-2xl font-black text-blue-500 mb-1">11</div>
-                  <div className="text-xs text-slate-500 uppercase font-bold tracking-widest">агентов</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="absolute -inset-10 bg-blue-600/10 blur-[100px] rounded-full -z-10 animate-pulse" />
-              <div className="p-2 rounded-[2rem] bg-gradient-to-br from-slate-800 to-slate-950 border border-slate-800 shadow-2xl">
-                <div className="bg-slate-900 rounded-[1.5rem] overflow-hidden">
-                  <div className="h-10 bg-slate-950 flex items-center px-6 gap-2 border-b border-slate-800">
-                    <div className="w-2.5 h-2.5 rounded-full bg-slate-800" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-slate-800" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-slate-800" />
-                    <div className="ml-auto flex items-center gap-4">
-                      <div className="w-32 h-1.5 bg-slate-800 rounded-full" />
-                      <div className="w-8 h-4 rounded bg-blue-600/20" />
-                    </div>
-                  </div>
-                  <img
-                    src={`${import.meta.env.BASE_URL}case-sovereignty-audit.png`}
-                    alt="Аудит суверенности 9D — оценка технологической независимости портфельных компаний"
-                    className="w-full block"
-                  />
                 </div>
               </div>
             </div>
